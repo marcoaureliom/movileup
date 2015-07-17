@@ -17,6 +17,7 @@
 		81FD98B31B5832E2007896E5 /* Episodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD98B21B5832E2007896E5 /* Episodios.swift */; };
 		9D51A95B94FD41AFFC9DE1F8 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6207C58C705046EC3D1FA68 /* Storyboards.swift */; };
 		A9AD65FA4E206692D8CD6FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA428CAA512DC5E49C52BBEA /* AppDelegate.swift */; };
+		C6A17A4ABB1D082D3857776A /* Pods_movileup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E031F422B31D912238FF43 /* Pods_movileup.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D362E3CBCA5D39E3162ADC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE2E26E8893F0ED102D1021 /* Foundation.framework */; };
 		F2605321070F07FBB5A589EE /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 584375F172A99E1616421C1C /* LaunchScreen.xib */; };
 		F87A6FC9A0D4D7E4CE4A511E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FE2859D837FCD5FC71E0D /* Images.xcassets */; };
@@ -38,6 +39,8 @@
 		2C9FE2859D837FCD5FC71E0D /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AE2E26E8893F0ED102D1021 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		584375F172A99E1616421C1C /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		69E031F422B31D912238FF43 /* Pods_movileup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movileup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E6239F95919C5A2A82B8C0 /* Pods-movileup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movileup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movileup/Pods-movileup.debug.xcconfig"; sourceTree = "<group>"; };
 		762B443978DDF2D5E7BA6F06 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		816B49A61B58417800431A53 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		8185831D1B56EA0400B9EDA2 /* CustonNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonNavigationController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		81E8EBCA1B56D2CB004EBA2B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81FD98AE1B582863007896E5 /* viewDidLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewDidLoad.swift; sourceTree = "<group>"; };
 		81FD98B21B5832E2007896E5 /* Episodios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episodios.swift; sourceTree = "<group>"; };
+		8E230688716C208907337AC7 /* Pods-movileup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movileup.release.xcconfig"; path = "Pods/Target Support Files/Pods-movileup/Pods-movileup.release.xcconfig"; sourceTree = "<group>"; };
 		A6207C58C705046EC3D1FA68 /* Storyboards.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		A8FE5D8F97C509B6E9E73E0A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA428CAA512DC5E49C52BBEA /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D362E3CBCA5D39E3162ADC9F /* Foundation.framework in Frameworks */,
+				C6A17A4ABB1D082D3857776A /* Pods_movileup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +168,7 @@
 			children = (
 				E60015E829947A2CA4DC0EBE /* iOS */,
 				BC1861E1AC20FE63AE1CF033 /* Pods_unit_tests.framework */,
+				69E031F422B31D912238FF43 /* Pods_movileup.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 			children = (
 				225EA1B9CF9FFBFA9F0456BE /* Pods-unit_tests.release.xcconfig */,
 				D5B5B193B75F802DC6BF3B55 /* Pods-unit_tests.debug.xcconfig */,
+				8E230688716C208907337AC7 /* Pods-movileup.release.xcconfig */,
+				71E6239F95919C5A2A82B8C0 /* Pods-movileup.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -261,12 +269,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A26F56E614B8EB14211E5516 /* Build configuration list for PBXNativeTarget "movileup" */;
 			buildPhases = (
+				911900C7A96C3075511872B6 /* Check Pods Manifest.lock */,
 				40709375E0404D72FC80B319 /* Generate Storyboards.swift (Natalie) */,
 				D3968E8754F85BB23F68FE03 /* Sources */,
 				07BBEE6058CA9EB4758ED3CE /* Frameworks */,
 				3384CDFC612CF6315BCAF0B5 /* Resources */,
 				1C70A883D10AEF944459CC4B /* Warn for TODO and FIXME comments */,
 				1D7B6B010D546AA0303E2CA7 /* Set version number */,
+				DC6A1983685EB4F9AEF75F3C /* Embed Pods Frameworks */,
+				AEEE229473442B013340F454 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -402,6 +413,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/natalie.swift \"$PROJECT_DIR/$PROJECT_NAME\" > \"$PROJECT_DIR/$PROJECT_NAME/Controllers/Storyboards.swift\"\n";
 		};
+		911900C7A96C3075511872B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		95C08794B3A2C2FCB816E240 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,6 +456,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEEE229473442B013340F454 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-movileup/Pods-movileup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC6A1983685EB4F9AEF75F3C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-movileup/Pods-movileup-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -585,6 +641,7 @@
 		};
 		65B1C59AF368CF887395D6A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E6239F95919C5A2A82B8C0 /* Pods-movileup.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -608,6 +665,7 @@
 		};
 		83CC5F5064F14E035C33795D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E230688716C208907337AC7 /* Pods-movileup.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;

@@ -10,6 +10,7 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellNumberLabel: UILabel!
     
     
@@ -22,5 +23,10 @@ class CollectionViewCell: UICollectionViewCell {
         
         let idx = number % CollectionViewCell.colors.count
         backgroundColor = CollectionViewCell.colors[idx]
+    } classe da célula - funcoes sao chamadas da classe da collection view*/
+    
+    /*func numeros(numero: Int){
+        cellNumberLabel.text = "Célula numero #\(numero)"
     }*/
+    
 }

@@ -26,6 +26,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(Reusable.Cell, forIndexPath: indexPath) as! CollectionViewCell
         
         //cell.loadCellNumber(indexPath.item)
+        //cell.numeros(indexPath.item)
         
         return cell
     }
