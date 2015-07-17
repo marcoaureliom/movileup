@@ -13,7 +13,8 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellNumberLabel: UILabel!
     
     
-    /*static let colors: [UIColor] = [.greenColor(), .purpleColor(),
+    /*array com cores e atribuição delas
+    static let colors: [UIColor] = [.greenColor(), .purpleColor(),
         .redColor(), .blueColor(), .orangeColor()]*/
     
     /*func loadCellNumber(number: Int) {
