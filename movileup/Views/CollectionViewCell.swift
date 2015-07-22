@@ -14,7 +14,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellNumberLabel: UILabel!
     
     
-    /*array com cores e atribuição delas
+    /* array com cores e atribuição delas
     static let colors: [UIColor] = [.greenColor(), .purpleColor(),
         .redColor(), .blueColor(), .orangeColor()]*/
     
