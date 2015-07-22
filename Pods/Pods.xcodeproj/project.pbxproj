@@ -477,8 +477,8 @@
 			children = (
 				250D3097B3A25870FC378B13 /* Episode.swift */,
 				1F17111793031B71899EDA4C /* JSONDecodable.swift */,
-				F6C9EF02DD22E097C8B2F29F /* Season.swift */,
 				09BF335B45709D0CAAF016BE /* Show.swift */,
+				F6C9EF02DD22E097C8B2F29F /* Season.swift */,
 				12489A20EB03E16CE0111EB5 /* Support Files */,
 			);
 			path = TraktModels;

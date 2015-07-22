@@ -28,8 +28,6 @@ extension Identifiers: JSONDecodable {
                 let tvrage = json["tvrage"] as? Int
                 let slug = json["slug"] as? String
                 
-                
-                
                 return Identifiers(trakt: trakt, tvdb: tvdb, imdb: imdb, tmdb: tmdb, tvrage: tvrage, slug: slug)
         }
         

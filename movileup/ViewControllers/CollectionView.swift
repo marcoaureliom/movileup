@@ -27,6 +27,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         //cell.loadCellNumber(indexPath.item)
         //cell.numeros(indexPath.item)
+        //let a = TraktHTTPClient.getShow("1",
+        /////let a = TraktHTTPClient.getShow("d",Show().("",12))
         
         return cell
     }
