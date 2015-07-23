@@ -14,6 +14,19 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellNumberLabel: UILabel!
     
     
+    /*private var task: RetrieveImageTask?
+    func loadShow(show: Show) {
+        let placeholder = UIImage(named: "poster")
+        if let url = show.poster?.fullImageURL ?? show.poster?.mediumImageURL ?? show.poster?.thumbImageURL {
+        posterImageView.kf_setImageWithURL(url, placeholderImage: placeholder)
+    } else {
+        posterImageView.image = placeholder
+        }
+        cellNumberLabel.text = show.title
+        
+    }*/
+    
+    
     /* array com cores e atribuição delas
     static let colors: [UIColor] = [.greenColor(), .purpleColor(),
         .redColor(), .blueColor(), .orangeColor()]*/

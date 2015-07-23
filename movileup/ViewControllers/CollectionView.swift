@@ -10,8 +10,39 @@ import UIKit
 
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+        private let httpClient = TraktHTTPClient()
+        private var shows: [Show]?
+        func loadShows() {
+        httpClient.getPopularShows { [weak self] result in
+        if let shows = result.value {
+        println("conseguiu")
+        self?.shows = shows
+        self?.collectionView.reloadData()
+    } else {
+        println("oops \(result.error)")
+        } }
+        }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "shows_to_show"{
+            if let cell = sender as? UICollectionViewCell,
+            indexPath = collectionView.indexPathForCell(cell) {
+            
+            let vc = segue.destinationViewController as! ViewController
+            vc.show = selectedShows?[indexPath.row]
+            vc.favoritesManager = favoritesManager
+            
+            }
+        
+            
+            }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
