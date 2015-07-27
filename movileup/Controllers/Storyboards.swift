@@ -167,6 +167,38 @@ extension UITableView {
 
 //MARK: - CustonNavigationController
 
+//MARK: - SeasonsViewController
+extension SeasonsViewController { 
+
+    enum Reusable: String, Printable, ReusableViewProtocol {
+        case Cell = "Cell"
+
+        var kind: ReusableKind? {
+            switch (self) {
+            case Cell:
+                return ReusableKind(rawValue: "tableViewCell")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var viewType: UIView.Type? {
+            switch (self) {
+            case Cell:
+                return SeasonsCollectionViewCell.self
+            default:
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+
 //MARK: - ViewController
 extension ViewController { 
 
@@ -200,6 +232,45 @@ extension ViewController {
 
 
 //MARK: - CollectionViewController
+extension UIStoryboardSegue {
+    func selection() -> CollectionViewController.Segue? {
+        if let identifier = self.identifier {
+            return CollectionViewController.Segue(rawValue: identifier)
+        }
+        return nil
+    }
+}
+
+extension CollectionViewController { 
+
+    enum Segue: String, Printable, SegueProtocol {
+        case Seasons = "Seasons"
+
+        var kind: SegueKind? {
+            switch (self) {
+            case Seasons:
+                return SegueKind(rawValue: "showDetail")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var destination: UIViewController.Type? {
+            switch (self) {
+            case Seasons:
+                return SeasonsViewController.self
+            default:
+                assertionFailure("Unknown destination")
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
 extension CollectionViewController { 
 
     enum Reusable: String, Printable, ReusableViewProtocol {
@@ -231,4 +302,4 @@ extension CollectionViewController {
 }
 
 
-//MARK: - TextView
+//MARK: - ShowDetalhesViewController

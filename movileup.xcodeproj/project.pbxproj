@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3261F2013BE98420E301ECE7 /* Pods_unit_tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1861E1AC20FE63AE1CF033 /* Pods_unit_tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		812414731B66B02F00A7165F /* SeasonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812414721B66B02F00A7165F /* SeasonsViewController.swift */; };
+		812414751B66B04900A7165F /* SeasonsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812414741B66B04900A7165F /* SeasonsViewControllerCell.swift */; };
 		816B49A71B58417800431A53 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B49A61B58417800431A53 /* EpisodeTableViewCell.swift */; };
 		8185831E1B56EA0400B9EDA2 /* CustonNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185831D1B56EA0400B9EDA2 /* CustonNavigationController.swift */; };
 		81CD2BDA1B6012710026A2D2 /* TraktHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD2BD91B6012710026A2D2 /* TraktHTTPClient.swift */; };
@@ -19,7 +21,6 @@
 		81E3C1E21B5973310012E604 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3C1E11B5973310012E604 /* CollectionView.swift */; };
 		81E3C1E41B5974930012E604 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3C1E31B5974930012E604 /* CollectionViewCell.swift */; };
 		81E8EBC91B56D2CB004EBA2B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 81E8EBCB1B56D2CB004EBA2B /* Main.storyboard */; };
-		81FD98AF1B582863007896E5 /* viewDidLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD98AE1B582863007896E5 /* viewDidLoad.swift */; };
 		81FD98B31B5832E2007896E5 /* Episodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FD98B21B5832E2007896E5 /* Episodios.swift */; };
 		9D51A95B94FD41AFFC9DE1F8 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6207C58C705046EC3D1FA68 /* Storyboards.swift */; };
 		A9AD65FA4E206692D8CD6FBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA428CAA512DC5E49C52BBEA /* AppDelegate.swift */; };
@@ -48,6 +49,8 @@
 		69E031F422B31D912238FF43 /* Pods_movileup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movileup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E6239F95919C5A2A82B8C0 /* Pods-movileup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movileup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movileup/Pods-movileup.debug.xcconfig"; sourceTree = "<group>"; };
 		762B443978DDF2D5E7BA6F06 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		812414721B66B02F00A7165F /* SeasonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsViewController.swift; sourceTree = "<group>"; };
+		812414741B66B04900A7165F /* SeasonsViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonsViewControllerCell.swift; path = ../ViewControllers/SeasonsViewControllerCell.swift; sourceTree = "<group>"; };
 		816B49A61B58417800431A53 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		8185831D1B56EA0400B9EDA2 /* CustonNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustonNavigationController.swift; sourceTree = "<group>"; };
 		81CD2BD91B6012710026A2D2 /* TraktHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraktHTTPClient.swift; path = ../Views/TraktHTTPClient.swift; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		81E3C1E11B5973310012E604 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		81E3C1E31B5974930012E604 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		81E8EBCA1B56D2CB004EBA2B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
-		81FD98AE1B582863007896E5 /* viewDidLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewDidLoad.swift; sourceTree = "<group>"; };
 		81FD98B21B5832E2007896E5 /* Episodios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episodios.swift; sourceTree = "<group>"; };
 		8E230688716C208907337AC7 /* Pods-movileup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movileup.release.xcconfig"; path = "Pods/Target Support Files/Pods-movileup/Pods-movileup.release.xcconfig"; sourceTree = "<group>"; };
 		A6207C58C705046EC3D1FA68 /* Storyboards.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		267324ECDDC4EFBA0747495A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				812414741B66B04900A7165F /* SeasonsViewControllerCell.swift */,
 				816B49A61B58417800431A53 /* EpisodeTableViewCell.swift */,
 				81E3C1E31B5974930012E604 /* CollectionViewCell.swift */,
 			);
@@ -153,9 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				8185831D1B56EA0400B9EDA2 /* CustonNavigationController.swift */,
-				81FD98AE1B582863007896E5 /* viewDidLoad.swift */,
 				81FD98B21B5832E2007896E5 /* Episodios.swift */,
 				81E3C1E11B5973310012E604 /* CollectionView.swift */,
+				812414721B66B02F00A7165F /* SeasonsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -520,12 +523,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812414731B66B02F00A7165F /* SeasonsViewController.swift in Sources */,
 				81CD2BE41B60155A0026A2D2 /* Season.swift in Sources */,
 				81E3C1E41B5974930012E604 /* CollectionViewCell.swift in Sources */,
 				81CD2BDA1B6012710026A2D2 /* TraktHTTPClient.swift in Sources */,
 				81E3C1E21B5973310012E604 /* CollectionView.swift in Sources */,
 				81CD2BE31B60155A0026A2D2 /* Show.swift in Sources */,
 				81FD98B31B5832E2007896E5 /* Episodios.swift in Sources */,
+				812414751B66B04900A7165F /* SeasonsViewControllerCell.swift in Sources */,
 				816B49A71B58417800431A53 /* EpisodeTableViewCell.swift in Sources */,
 				A9AD65FA4E206692D8CD6FBB /* AppDelegate.swift in Sources */,
 				81CD2BDC1B6015110026A2D2 /* Result.swift in Sources */,
@@ -534,7 +539,6 @@
 				81CD2BE21B60155A0026A2D2 /* JSONDecodable.swift in Sources */,
 				9D51A95B94FD41AFFC9DE1F8 /* Storyboards.swift in Sources */,
 				81E8EBC91B56D2CB004EBA2B /* Main.storyboard in Sources */,
-				81FD98AF1B582863007896E5 /* viewDidLoad.swift in Sources */,
 				F2605321070F07FBB5A589EE /* LaunchScreen.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

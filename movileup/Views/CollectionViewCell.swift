@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TraktModels
+import Kingfisher
 
 class CollectionViewCell: UICollectionViewCell {
     
@@ -14,32 +16,30 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellNumberLabel: UILabel!
     
     
-    /*private var task: RetrieveImageTask?
-    func loadShow(show: Show) {
+    var task : RetrieveImageTask?
+    
+    func loadShow(show : Show) {
+        
         let placeholder = UIImage(named: "poster")
-        if let url = show.poster?.fullImageURL ?? show.poster?.mediumImageURL ?? show.poster?.thumbImageURL {
-        posterImageView.kf_setImageWithURL(url, placeholderImage: placeholder)
-    } else {
-        posterImageView.image = placeholder
+        
+        if let image = show.poster?.mediumImageURL {
+            task = cellImage.kf_setImageWithURL(image, placeholderImage: placeholder)
         }
+        else {
+            cellImage.image = placeholder
+        }
+        
         cellNumberLabel.text = show.title
+    }
+    
+    /*override func prepareForReuse() {
+        super.prepareForReuse()
         
+        if task != nil {
+            task?.cancel()
+        }
+        showImage.image = nil
     }*/
-    
-    
-    /* array com cores e atribuição delas
-    static let colors: [UIColor] = [.greenColor(), .purpleColor(),
-        .redColor(), .blueColor(), .orangeColor()]*/
-    
-    /*func loadCellNumber(number: Int) {
-        cellNumberLabel.text = "Cell #\(number)"
-        
-        let idx = number % CollectionViewCell.colors.count
-        backgroundColor = CollectionViewCell.colors[idx]
-    } classe da célula - funcoes sao chamadas da classe da collection view*/
-    
-    /*func numeros(numero: Int){
-        cellNumberLabel.text = "Célula numero #\(numero)"
-    }*/
+
     
 }
