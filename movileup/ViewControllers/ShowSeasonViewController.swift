@@ -15,6 +15,9 @@ protocol ShowSeasonViewControllerDelegate: class {
 
 class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ShowInternalViewController {
     
+    var totalSeasons : Int = 0
+    
+    
     @IBOutlet weak var tableView: UITableView!
     var showSeasons:[Season]?
     weak var delegate: ShowSeasonViewControllerDelegate?
@@ -23,6 +26,7 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         self.tableView.scrollEnabled = false
+        
         loadSeasons(self.showSeasons)
     }
     
@@ -40,10 +44,12 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    
     //TableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let totalSeasons = self.showSeasons?.count {
+            //self.totalSeasons = totalSeasons
             return totalSeasons
         } else {
             return 0
@@ -62,6 +68,12 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+
+    
+    
+    
+    
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if let season = self.showSeasons?[indexPath.row] {
@@ -69,6 +81,7 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
     
     func intrinsicContentSize() -> CGSize {

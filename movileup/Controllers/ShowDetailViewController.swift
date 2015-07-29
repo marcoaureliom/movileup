@@ -41,7 +41,9 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         super.viewDidLoad()
         
         if let title = self.show?.title {
+            
             self.title = title
+            
         }
         
         if let showYear = self.show?.firstAired {
@@ -55,10 +57,9 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
             
             self.yearLabel.text  = year
             
-            
-            
-            
+             
         }
+        
         self.loadData()
         
         //Favoritos
@@ -71,12 +72,16 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         println("\(self.dynamicType) deinit")
         
     }
+
+    
     
     //Verificar favoritos
     func isFavorite() -> Bool {
+        
         if let showId = self.show?.identifiers.slug {
             
             if FavoritesManager.favoritesIdentifiers.contains(showId) {
+                
                 self.favoriteButton.selected = true
                 return true
                 
@@ -84,13 +89,15 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
                 
                 self.favoriteButton.selected = false
                 return false
-                
             }
-            
         }
-        
         return false
     }
+    
+    
+
+    
+    
     
     func loadData() {
         
@@ -127,7 +134,10 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         
     }
     
+    
+    
     override func viewDidLayoutSubviews() {
+        
         super.viewDidLayoutSubviews()
         
         self.overviewConstraint.constant = self.showOverviewViewController.intrinsicContentSize().height
@@ -136,6 +146,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         self.moreConstraint.constant = self.showMoreViewController.intrinsicContentSize().height
         
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

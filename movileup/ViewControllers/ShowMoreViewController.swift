@@ -48,6 +48,10 @@ class ShowMoreViewController: UIViewController {
             showDetails += "\nStarted in: \(year)"
         }
         
+        
+        
+        
+        
         if let country = self.show?.country {
             showDetails += "\nCountry: \(country.uppercaseString)"
         }

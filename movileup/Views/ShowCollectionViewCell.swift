@@ -34,5 +34,9 @@ class ShowCollectionViewCell: UICollectionViewCell {
         posterImageView.image = nil
     }
     
+    
+    
+    
+    
 }
 

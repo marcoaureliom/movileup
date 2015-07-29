@@ -10,6 +10,7 @@ import TraktModels
 
 class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    //Qual página
     var page = 1
     var isLoading = false
     
@@ -18,6 +19,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
+    
     
     private var favoritesManager:FavoritesManager = FavoritesManager()
     private let httpClient = TraktHTTPClient()
@@ -28,7 +30,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Carregar os shows
+        // Carregar Shows
         self.loadShows()
         let name = FavoritesManager.favoritesChangedNotification
         let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -59,19 +61,10 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
+    //Atualizar os Favoritos
     func favoritesChanged() {
         
         self.favoriteShows.removeAll(keepCapacity: true)
-        
-        /*if let shows = self.shows {
-        
-        for show in shows {
-        
-        if FavoritesManager.favoritesIdentifiers.contains(show.identifiers.slug!) {
-        self.favoriteShows.append(show)
-        }
-        }
-        }*/
         
         for showId in FavoritesManager.favoritesIdentifiers {
             self.httpClient.getShow(showId, completion: { (result) -> Void in
@@ -84,6 +77,8 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         self.reloadShows()
     }
+    
+    
     
     func loadingView(show: Bool) {
         
@@ -101,7 +96,6 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.view.addSubview(self.loadingView)
             
         } else {
-            
             self.loadingView.removeFromSuperview()
             self.loadingIndicator.removeFromSuperview()
             
@@ -145,6 +139,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
+    //Carregar mais Shows
     func loadMore() {
         
         if self.isLoading == false {
@@ -176,6 +171,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
+    //Recarregar
     func reloadShows() {
         
         switch self.filterSegmentedControl.selectedSegmentIndex {
@@ -210,9 +206,10 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         if indexPath.row == self.popularShows.count - 3 {
             self.loadMore()
         }
-        
         return cell
     }
+
+    
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         let idealSpace: CGFloat = 12

@@ -51,6 +51,7 @@ class FavoritesManager: NSObject {
         self.postNotification()
         
     }
+
     
     
     //Remover favorito

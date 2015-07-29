@@ -80,7 +80,6 @@ class TraktHTTPClient {
         return Manager(configuration: configuration)
         }()
     
-    // Get one single element from JSON
     private func getJSONElement<T: JSONDecodable>(router: Router, completion: ((Result<T, NSError?>) ->Void)?) {
         
         manager.request(router).validate().responseJSON {
@@ -101,10 +100,8 @@ class TraktHTTPClient {
             }
         }
     }
-    //Get one single element from JSON
     
     
-    // Get a list of elements from JSON
     private func getJSONElements<T: JSONDecodable>(router: Router, completion: ((Result<[T], NSError?>) -> Void)?) {
         
         manager.request(router).validate().responseJSON {

@@ -2,7 +2,7 @@
 //  SeasonTableViewCell.swift
 //  movileup
 //
-//  Created by iOS on 7/27/15.
+//  Created by iOS on 7/26/15.
 //  Copyright (c) 2015 movile. All rights reserved.
 //
 
@@ -46,5 +46,9 @@ class SeasonTableViewCell: UITableViewCell {
         super.prepareForReuse()
         posterImageView.image = nil
     }
+    
+    
+    
+    
     
 }

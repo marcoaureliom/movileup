@@ -23,7 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.titleTextAttributes = attrs
         appearance.tintColor = UIColor.whiteColor()
         
-        return true
+        return true 
         
     }
+    
+    
+    
+    
+    
 }
