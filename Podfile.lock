@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (1.2.3)
+  - Argo (1.0.3):
+    - Box (~> 1.2)
+    - Runes (>= 1.2.2)
   - BorderedView (0.1.0)
   - Box (1.2.2)
   - FloatRatingView (1.0.0)
@@ -10,12 +13,14 @@ PODS:
   - OverlayView (0.1.0)
   - Result (0.4.4):
     - Box (~> 1.2)
+  - Runes (2.0.0)
   - TagListView (0.1.4)
   - TraktModels (0.1.0):
     - ISO8601DateFormatter (~> 0.7)
 
 DEPENDENCIES:
   - Alamofire
+  - Argo
   - BorderedView
   - FloatRatingView (from `https://github.com/strekfus/FloatRatingView.git`)
   - Kingfisher
@@ -47,6 +52,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
+  Argo: 480471806cf73d4074fcb94751482cd6c139ba3c
   BorderedView: d5a4373310d6c7c0fa922eade7ca13672541dad8
   Box: a92e8aa4c099e6bc0733829665caf9e668ef53b8
   FloatRatingView: 6b1a1431432cb7db33cebf6f96929c738cccb84f
@@ -56,6 +62,7 @@ SPEC CHECKSUMS:
   OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9
   OverlayView: cdfcc457c101fa1c95a8eb58adb69d534617db09
   Result: b44f6bc8762bbffaf2c5df58f2c7d12c3496ced8
+  Runes: 4fe81355f4620b76b02176222d264b33e60dba51
   TagListView: 86fcd7616973096aeaaf71bf774eecacf483c1fb
   TraktModels: bb7f4bbee75805f72747e492d5ca6c9583c1dfcb
 

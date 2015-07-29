@@ -16,8 +16,8 @@ struct Storyboards {
             return UIStoryboard(name: self.identifier, bundle: nil)
         }
 
-        static func instantiateInitialViewController() -> CustonNavigationController! {
-            return self.storyboard.instantiateInitialViewController() as! CustonNavigationController
+        static func instantiateInitialViewController() -> CustomNavigationController! {
+            return self.storyboard.instantiateInitialViewController() as! CustomNavigationController
         }
 
         static func instantiateViewControllerWithIdentifier(identifier: String) -> UIViewController {
@@ -165,91 +165,25 @@ extension UITableView {
 }
 
 
-//MARK: - CustonNavigationController
-
-//MARK: - SeasonsViewController
-extension SeasonsViewController { 
-
-    enum Reusable: String, Printable, ReusableViewProtocol {
-        case Cell = "Cell"
-
-        var kind: ReusableKind? {
-            switch (self) {
-            case Cell:
-                return ReusableKind(rawValue: "tableViewCell")
-            default:
-                preconditionFailure("Invalid value")
-                break
-            }
-        }
-
-        var viewType: UIView.Type? {
-            switch (self) {
-            case Cell:
-                return SeasonsCollectionViewCell.self
-            default:
-                return nil
-            }
-        }
-
-        var identifier: String? { return self.description } 
-        var description: String { return self.rawValue }
-    }
-
-}
-
-
-//MARK: - ViewController
-extension ViewController { 
-
-    enum Reusable: String, Printable, ReusableViewProtocol {
-        case Cell = "Cell"
-
-        var kind: ReusableKind? {
-            switch (self) {
-            case Cell:
-                return ReusableKind(rawValue: "tableViewCell")
-            default:
-                preconditionFailure("Invalid value")
-                break
-            }
-        }
-
-        var viewType: UIView.Type? {
-            switch (self) {
-            case Cell:
-                return EpisodeTableViewCell.self
-            default:
-                return nil
-            }
-        }
-
-        var identifier: String? { return self.description } 
-        var description: String { return self.rawValue }
-    }
-
-}
-
-
-//MARK: - CollectionViewController
+//MARK: - ShowsViewController
 extension UIStoryboardSegue {
-    func selection() -> CollectionViewController.Segue? {
+    func selection() -> ShowsViewController.Segue? {
         if let identifier = self.identifier {
-            return CollectionViewController.Segue(rawValue: identifier)
+            return ShowsViewController.Segue(rawValue: identifier)
         }
         return nil
     }
 }
 
-extension CollectionViewController { 
+extension ShowsViewController { 
 
     enum Segue: String, Printable, SegueProtocol {
-        case Seasons = "Seasons"
+        case SegueShowDetail = "SegueShowDetail"
 
         var kind: SegueKind? {
             switch (self) {
-            case Seasons:
-                return SegueKind(rawValue: "showDetail")
+            case SegueShowDetail:
+                return SegueKind(rawValue: "show")
             default:
                 preconditionFailure("Invalid value")
                 break
@@ -258,8 +192,8 @@ extension CollectionViewController {
 
         var destination: UIViewController.Type? {
             switch (self) {
-            case Seasons:
-                return SeasonsViewController.self
+            case SegueShowDetail:
+                return ShowDetailViewController.self
             default:
                 assertionFailure("Unknown destination")
                 return nil
@@ -271,14 +205,14 @@ extension CollectionViewController {
     }
 
 }
-extension CollectionViewController { 
+extension ShowsViewController { 
 
     enum Reusable: String, Printable, ReusableViewProtocol {
-        case Cell = "Cell"
+        case ShowCell = "ShowCell"
 
         var kind: ReusableKind? {
             switch (self) {
-            case Cell:
+            case ShowCell:
                 return ReusableKind(rawValue: "collectionViewCell")
             default:
                 preconditionFailure("Invalid value")
@@ -288,8 +222,8 @@ extension CollectionViewController {
 
         var viewType: UIView.Type? {
             switch (self) {
-            case Cell:
-                return CollectionViewCell.self
+            case ShowCell:
+                return ShowCollectionViewCell.self
             default:
                 return nil
             }
@@ -302,4 +236,133 @@ extension CollectionViewController {
 }
 
 
-//MARK: - ShowDetalhesViewController
+//MARK: - SeasonEpisodesViewController
+extension SeasonEpisodesViewController { 
+
+    enum Reusable: String, Printable, ReusableViewProtocol {
+        case EpisodeCell = "EpisodeCell"
+
+        var kind: ReusableKind? {
+            switch (self) {
+            case EpisodeCell:
+                return ReusableKind(rawValue: "tableViewCell")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var viewType: UIView.Type? {
+            switch (self) {
+            default:
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+
+//MARK: - ShowDetailViewController
+extension UIStoryboardSegue {
+    func selection() -> ShowDetailViewController.Segue? {
+        if let identifier = self.identifier {
+            return ShowDetailViewController.Segue(rawValue: identifier)
+        }
+        return nil
+    }
+}
+
+extension ShowDetailViewController { 
+
+    enum Segue: String, Printable, SegueProtocol {
+        case SegueShowOverview = "SegueShowOverview"
+        case SegueShowSeasons = "SegueShowSeasons"
+        case SegueShowGenres = "SegueShowGenres"
+        case SegueShowMore = "SegueShowMore"
+        case SegueSeasonEpisodes = "SegueSeasonEpisodes"
+
+        var kind: SegueKind? {
+            switch (self) {
+            case SegueShowOverview:
+                return SegueKind(rawValue: "embed")
+            case SegueShowSeasons:
+                return SegueKind(rawValue: "embed")
+            case SegueShowGenres:
+                return SegueKind(rawValue: "embed")
+            case SegueShowMore:
+                return SegueKind(rawValue: "embed")
+            case SegueSeasonEpisodes:
+                return SegueKind(rawValue: "show")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var destination: UIViewController.Type? {
+            switch (self) {
+            case SegueShowOverview:
+                return ShowOverviewViewController.self
+            case SegueShowSeasons:
+                return ShowSeasonViewController.self
+            case SegueShowGenres:
+                return ShowGenresViewController.self
+            case SegueShowMore:
+                return ShowMoreViewController.self
+            case SegueSeasonEpisodes:
+                return SeasonEpisodesViewController.self
+            default:
+                assertionFailure("Unknown destination")
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+//MARK: - CustomNavigationController
+
+//MARK: - ShowOverviewViewController
+
+//MARK: - ShowSeasonViewController
+extension ShowSeasonViewController { 
+
+    enum Reusable: String, Printable, ReusableViewProtocol {
+        case SeasonCell = "SeasonCell"
+
+        var kind: ReusableKind? {
+            switch (self) {
+            case SeasonCell:
+                return ReusableKind(rawValue: "tableViewCell")
+            default:
+                preconditionFailure("Invalid value")
+                break
+            }
+        }
+
+        var viewType: UIView.Type? {
+            switch (self) {
+            case SeasonCell:
+                return SeasonTableViewCell.self
+            default:
+                return nil
+            }
+        }
+
+        var identifier: String? { return self.description } 
+        var description: String { return self.rawValue }
+    }
+
+}
+
+
+//MARK: - ShowGenresViewController
+
+//MARK: - ShowMoreViewController

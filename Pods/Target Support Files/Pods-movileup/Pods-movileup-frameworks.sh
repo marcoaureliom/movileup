@@ -49,6 +49,7 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
+  install_framework 'Argo.framework'
   install_framework 'BorderedView.framework'
   install_framework 'Box.framework'
   install_framework 'FloatRatingView.framework'
@@ -56,11 +57,13 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Kingfisher.framework'
   install_framework 'OverlayView.framework'
   install_framework 'Result.framework'
+  install_framework 'Runes.framework'
   install_framework 'TagListView.framework'
   install_framework 'TraktModels.framework'
 fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Alamofire.framework'
+  install_framework 'Argo.framework'
   install_framework 'BorderedView.framework'
   install_framework 'Box.framework'
   install_framework 'FloatRatingView.framework'
@@ -68,6 +71,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Kingfisher.framework'
   install_framework 'OverlayView.framework'
   install_framework 'Result.framework'
+  install_framework 'Runes.framework'
   install_framework 'TagListView.framework'
   install_framework 'TraktModels.framework'
 fi

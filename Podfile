@@ -9,6 +9,7 @@ target 'movileup', :exclusive => true do
     # Add Application pods here
     pod 'Alamofire'
     pod 'Result'
+    pod 'Argo'
     pod 'TraktModels', :git => 'http://github.com/marcelofabri/TraktModels.git'
     pod 'Kingfisher'
     pod 'TagListView'

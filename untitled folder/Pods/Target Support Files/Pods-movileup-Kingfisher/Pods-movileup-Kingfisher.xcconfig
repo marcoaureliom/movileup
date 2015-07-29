@@ -1,0 +1,1 @@
+PODS_MOVILEUP_KINGFISHER_OTHER_LDFLAGS = -weak_framework "WatchKit"
