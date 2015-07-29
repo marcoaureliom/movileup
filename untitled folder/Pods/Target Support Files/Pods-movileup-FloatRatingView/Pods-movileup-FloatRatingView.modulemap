@@ -1,6 +1,0 @@
-framework module FloatRatingView {
-  umbrella header "Pods-movileup-FloatRatingView-umbrella.h"
-
-  export *
-  module * { export * }
-}

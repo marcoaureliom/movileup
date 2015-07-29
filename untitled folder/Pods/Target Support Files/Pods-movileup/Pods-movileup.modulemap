@@ -1,6 +1,0 @@
-framework module Pods_movileup {
-  umbrella header "Pods-movileup-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module BorderedView {
-  umbrella header "Pods-movileup-BorderedView-umbrella.h"
-
-  export *
-  module * { export * }
-}
