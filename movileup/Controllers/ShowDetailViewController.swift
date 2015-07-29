@@ -54,6 +54,10 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
             let year = formatter.stringFromDate(showYear) as String
             
             self.yearLabel.text  = year
+            
+            
+            
+            
         }
         self.loadData()
         
