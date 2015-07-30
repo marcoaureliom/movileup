@@ -18,14 +18,15 @@ class ShowOverviewViewController: UIViewController, ShowInternalViewController {
         
         self.overviewTextView.textContainer.lineFragmentPadding = 0
         self.overviewTextView.textContainerInset = UIEdgeInsetsZero
-        
         self.overviewTextView.text = overview
         
     }
 
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
+    
     }
     
     deinit {

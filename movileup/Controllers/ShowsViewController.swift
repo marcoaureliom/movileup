@@ -96,6 +96,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.view.addSubview(self.loadingView)
             
         } else {
+            
             self.loadingView.removeFromSuperview()
             self.loadingIndicator.removeFromSuperview()
             
@@ -111,7 +112,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.loadingView(true)
             self.isLoading = true
             
-            self.httpClient.getPopularShows(1) { (result) -> Void in
+            self.httpClient.getPopularShows(self.page) { (result) -> Void in
                 if let shows = result.value {
     
                     self.popularShows = shows
@@ -135,7 +136,6 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
                 }
             }
         }
-        
     }
     
     //Carregar mais Shows
@@ -182,8 +182,10 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             self.collectionView.reloadData()
         default:
             self.collectionView.reloadData()
+            
         }
     }
+
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -199,15 +201,20 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! ShowCollectionViewCell
         
         if let show = self.shows?[indexPath.row] {
+            
             cell.loadShow(show)
+            
         }
         
         if indexPath.row == self.popularShows.count - 3 {
+            
             self.loadMore()
+            
         }
+        
         return cell
+    
     }
-
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {

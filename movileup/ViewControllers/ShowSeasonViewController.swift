@@ -70,9 +70,6 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-
-    
-    
     
     
     

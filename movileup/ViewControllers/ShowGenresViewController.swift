@@ -27,6 +27,8 @@ class ShowGenresViewController: UIViewController, ShowInternalViewController {
         
     }
     
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -37,6 +39,7 @@ class ShowGenresViewController: UIViewController, ShowInternalViewController {
         
     }
     
+    //Ajustar tamanho
     func intrinsicContentSize() -> CGSize {
         
         var totalHeight = self.genresTagListView.intrinsicContentSize().height + 39

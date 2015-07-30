@@ -30,17 +30,23 @@ class SeasonTableViewCell: UITableViewCell {
         let placeholder = UIImage(named: "poster")
         
         if let url = season.poster?.thumbImageURL {
+            
             self.posterImageView.kf_setImageWithURL(url, placeholderImage: placeholder)
             
         } else {
+            
             self.posterImageView.image = placeholder
+            
         }
-        
+    
         self.seasonTitleLabel.text = "Season \(season.number)"
         self.seasonEpisodesLabel.text = "\(season.episodeCount!) episodes"
         self.ratingView.rating = season.rating!
         self.ratingLabel.text = String(format: "%.1f", season.rating!)
+        
     }
+
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()

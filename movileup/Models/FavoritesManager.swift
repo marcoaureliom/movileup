@@ -29,17 +29,16 @@ class FavoritesManager: NSObject {
         
         }()
     
-    
     private func postNotification() {
         let name = self.dynamicType.favoritesChangedNotification
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.postNotificationName(name, object: self)
         
     }
-    
+
 
     
-    //addFavoritos
+    //Adicionar favorito
     func setFavorite(showId: String) {
         
         FavoritesManager.favoritesIdentifiers.insert(showId)
@@ -52,6 +51,7 @@ class FavoritesManager: NSObject {
         self.postNotification()
         
     }
+    
 
     
     

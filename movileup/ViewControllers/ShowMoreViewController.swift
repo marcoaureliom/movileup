@@ -49,9 +49,7 @@ class ShowMoreViewController: UIViewController {
         }
         
         
-        
-        
-        
+    
         if let country = self.show?.country {
             showDetails += "\nCountry: \(country.uppercaseString)"
         }
@@ -59,7 +57,7 @@ class ShowMoreViewController: UIViewController {
         self.detailsTextView.text = showDetails
     }
     
-    
+    //Ajustar tamanho
     func intrinsicContentSize() -> CGSize {
         
         var overviewHeight = self.detailsTextView.intrinsicContentSize().height + 39

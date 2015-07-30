@@ -43,7 +43,6 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         if let title = self.show?.title {
             
             self.title = title
-            
         }
         
         if let showYear = self.show?.firstAired {
@@ -57,7 +56,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
             
             self.yearLabel.text  = year
             
-             
+            
         }
         
         self.loadData()
@@ -72,7 +71,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         println("\(self.dynamicType) deinit")
         
     }
-
+    
     
     
     //Verificar favoritos
@@ -95,7 +94,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
     }
     
     
-
+    
     
     
     
@@ -103,6 +102,7 @@ class ShowDetailViewController: UIViewController, ShowSeasonViewControllerDelega
         
         // Atualizar imagem
         let placeholder = UIImage(named: "bg")
+        
         
         if let url = self.show?.thumbImageURL {
             self.coverImageView.kf_setImageWithURL(url, placeholderImage: placeholder)
