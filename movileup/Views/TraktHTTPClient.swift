@@ -9,7 +9,6 @@
 import Alamofire
 import UIKit
 import Result
-//import Argo
 import TraktModels
 
 private enum Router : URLRequestConvertible {

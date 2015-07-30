@@ -30,6 +30,8 @@ class ShowSeasonViewController: UIViewController, UITableViewDelegate, UITableVi
         loadSeasons(self.showSeasons)
     }
     
+    
+    
     deinit {
         
         println("\(self.dynamicType) deinit")

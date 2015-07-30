@@ -67,6 +67,8 @@ class SeasonEpisodesViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
+    
+    
     func loadData() {
         
         // Atualizar imagem
@@ -97,10 +99,8 @@ class SeasonEpisodesViewController: UIViewController, UITableViewDelegate, UITab
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table View
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.episodes.count
     }

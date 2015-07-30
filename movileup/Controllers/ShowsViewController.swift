@@ -113,8 +113,7 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             
             self.httpClient.getPopularShows(1) { (result) -> Void in
                 if let shows = result.value {
-                    println("Shows carregados com sucesso!")
-                    
+    
                     self.popularShows = shows
                     
                     for showId in FavoritesManager.favoritesIdentifiers {
@@ -242,6 +241,8 @@ class ShowsViewController: UIViewController, UICollectionViewDelegate, UICollect
             showDetail.show = self.shows?[indexPath.row]
             
             println(self.shows![indexPath.row].title)
+            
+            
             
         }
     }

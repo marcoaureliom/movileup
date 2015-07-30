@@ -37,6 +37,7 @@ class FavoritesManager: NSObject {
         
     }
     
+
     
     //addFavoritos
     func setFavorite(showId: String) {
